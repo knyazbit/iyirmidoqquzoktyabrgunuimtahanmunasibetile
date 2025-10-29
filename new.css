@@ -1,0 +1,71 @@
+
+.hero {
+	background-image: url('./images/L_height.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height: 100vh; 
+	display: flex;
+	flex-direction: column; 
+	align-items: center;    
+	justify-content: center;
+	gap: 1rem;              
+	color: #ffffff;
+}
+
+
+.hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	z-index: 0;
+}
+
+
+.hero > * {
+	position: relative;
+	z-index: 1;
+}
+
+.boxed-btn {
+	background: #615CFD;
+	color: #fff;
+	padding: 12px 33px;
+	font-family: "Muli", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	border: 0;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	text-align: center;
+	text-transform: capitalize;
+	transition: background-color 180ms ease, transform 160ms ease, box-shadow 200ms ease;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	margin: 0;
+    
+}
+
+.boxed-btn:hover {
+	background-color: #4f45e6;
+	transform: translateY(-4px) scale(1.02);
+	box-shadow: 0 12px 24px rgba(97,92,253,0.18);
+}
+
+.boxed-btn:focus {
+	outline: none;
+	box-shadow: 0 0 0 6px rgba(97,92,253,0.12);
+}
+
+.boxed-btn:active {
+	transform: translateY(-2px) scale(0.995);
+}
+
+
+@media (min-width: 768px) {
+	.hero { min-height: 100vh; }
+}
